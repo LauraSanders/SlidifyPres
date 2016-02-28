@@ -1,0 +1,68 @@
+---
+title       : Slidify Presentation of my shiny app.
+subtitle    : Why should you use my app
+author      : Laura Sanders
+job         : R student
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Purpose of the app
+
+The environment is imortant for all of the people.
+And therefore also airquality.
+The mean Ozone can be influenced by Solar Radiation.
+The app shows the mean Ozone if a certain level of Solar Radiation is present in the air.
+
+--- .class #id 
+
+## How is the connection between Ozone and Solar.R determined
+
+
+
+1. Exclude all missing variables
+2. Create a model with Ozone as the depenedent variabele and Solar.R as the independent variable
+3. Solar.R has a positive influence on the mean Ozone. The higher the amount of Solar.R the higher the mean Ozone
+4. Create a shiny app in which people fill in the Solar.R value they have
+5. If you push the submit button the new mean Ozone will be calculated for values between 7 and 334
+
+---
+
+## How does the formula look like
+
+
+The Solar.R value has a positive influence on the mean Ozone.The function used to calculate the Ozone is as follows. 
+
+```r
+Solar.R<-10
+Ozonedetermined<-18.5987278+0.1271653*Solar.R
+```
+Also, you can see the summary of the values where the model is based on.
+
+
+```r
+summary(datamodel$Solar.R)
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     7.0   113.5   207.0   184.8   255.5   334.0
+```
+
+
+---
+
+## Why use the app?
+
+- positive influence on peoples health
+- Less ill people 
+- Less cost for the government
+- People are less dependent on the government to warn them
+- almost no costs involved for everyone with access to a computer
+
+
+
